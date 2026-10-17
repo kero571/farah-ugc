@@ -82,7 +82,7 @@ export const FILTERS = [
 
 export const WORKS = Array.from({ length: 7 }, (_, i) => ({
   id: i + 1,
-  src: `/videos/${i + 1}.mp4`,
+  src: `/videos/${i + 1}.MP4`,
 }));
 
 export const STEPS = [
