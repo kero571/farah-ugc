@@ -31,7 +31,7 @@ export const BRANDS = [
 export const HERO_STATS = [
   { value: "50+", label: "Collabs" },
   { value: "High ROI", label: "Beauty & Food", gold: true },
-  { value: "48h", label: "Turnaround" },
+  { value: "48h", label: "Delivery" },
 ];
 
 export const ABOUT_CARDS = [
