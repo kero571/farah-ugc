@@ -10,11 +10,22 @@ export const NAV = [
 
 export const TOPICS = ["Skincare", "Hair", "Makeup", "Lifestyle", "Food"];
 export const BRANDS = [
-  "GLOW RECIPE",
-  "SEPHORA",
-  "GLOW ORGANICS",
-  "NOURISH BOTANICS",
-  "BEAN & LEAF CAFE",
+  "L'Oréal Paris",
+  "Garnier",
+  "CeraVe",
+  "Vichy",
+  "Rody Perfumes",
+  "Alya Perfumes",
+  "Skadi Bloom",
+  "Miss Jello",
+  "Vabilla",
+  "Eureka (Kiara)",
+  "Premier",
+  "Skin Who",
+  "Disaar",
+  "PinknGreen",
+  "Noon",
+  "Bemart",
 ];
 
 export const HERO_STATS = [
