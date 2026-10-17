@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --nav-h: مساحة الـ navbar (الـ pill + الهوامش) */
+:root { --nav-h: 88px; }
+@media (min-width: 1024px) { :root { --nav-h: 96px; } }
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); -webkit-text-size-adjust: 100%; overflow-x: clip; }
+  body { @apply bg-petal font-sans text-ink antialiased; overflow-x: clip; }
+  img, svg, video { max-width: 100%; }
+  :focus-visible { @apply outline outline-2 outline-offset-2 outline-coral; }
+}
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10; }
+  .section { @apply py-16 md:py-20 lg:py-28; }
+  .h2 { @apply font-serif text-[1.85rem] font-bold leading-[1.2] sm:text-4xl lg:text-5xl; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full bg-crimson px-7 py-4 text-[15px] font-bold text-white shadow-[0_12px_24px_-12px_rgba(179,21,42,.8)] transition hover:bg-crimsonDark active:scale-[.98]; }
+  .btn-outline { @apply inline-flex items-center justify-center gap-2 rounded-full border border-crimson px-7 py-3.5 text-[15px] font-bold text-crimson transition hover:bg-crimson hover:text-white; }
+  .btn-glass { @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-7 py-4 text-[15px] font-bold text-white backdrop-blur transition hover:bg-white/20; }
+  .glass { @apply border border-white/20 bg-[rgba(22,13,13,.55)] backdrop-blur-xl; }
+}
+/* Hero = ارتفاع الشاشة - ارتفاع الـ navbar (vh fallback ثم svh) */
+.hero-h { min-height: calc(100vh - var(--nav-h)); min-height: calc(100svh - var(--nav-h)); }
+.defer { content-visibility: auto; contain-intrinsic-size: 1px 800px; }
+.no-scrollbar { scrollbar-width: none; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
